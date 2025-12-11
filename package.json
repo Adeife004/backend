@@ -2,22 +2,18 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "This is my first backend class",
-  "keywords": [
-    "backend",
-    "node",
-    "express"
-  ],
+  "keywords": ["backend", "node", "express"],
   "license": "MIT",
   "author": "Jasmine",
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "test": "test.js",
+    "start": "node index.js",
     "dev": "nodemon index.js",
-     "build": "echo 'No build step for backend'"
+    "build": "echo 'No build step for backend'"
   },
   "dependencies": {
-    "bcryptjs": "^3.0.3", 
+    "bcryptjs": "^3.0.3",
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",
     "ejs": "^3.1.10",
@@ -28,6 +24,7 @@
     "mongoose": "^8.19.3"
   },
   "devDependencies": {
-    "@types/node": "^24.10.0"
+    "@types/node": "^24.10.0",
+    "nodemon": "^3.0.1"
   }
 }
