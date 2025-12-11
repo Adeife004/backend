@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <h1>Dashboard Page</h1>
+
+
+
+    <% customers.forEach((users, index)=> { %>
+        <% if (customers[index].firstName == "Ade") { %>
+            <i> <%= index+1 %> </i>
+            <h1><%= users.firstName %> <%= users.lastName %></h1>
+            <h1><%= users.email %></h1>
+            <h1><%= users.age %></h1>
+         
+        <% } else { %>
+            <h2>user not found</h2>
+            <% }  %>
+    <% })  %> 
+
+    <% customers.forEach((users, index) => { %>
+     <p><%= index+1 %></p>
+     <p><%= users.firstName %></p> 
+     <p><%= users.lastName %></p>
+     <p><%= users.email %></p>
+     <p><%= users.age %></p>  
+     <form action="/delete/<%= index %>" method="POST" onsubmit="return confirm ('You Sure Say You Wan Delete?')">
+         <button type="submit">Delete</button> 
+     </form> 
+     
+     <form action="/update/<%= index %>" method="POST">
+        <button type="submit">Edit</button>
+     </form>
+    <% }) %>
+
+    
+
+  </body>
+</html>

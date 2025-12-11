@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Products</title>
+</head>
+<body>
+    <h1>All Products</h1>
+
+    <ul>
+        <% allproducts.forEach(product => { %>
+            <li><%= product.product_name %> - ₦<%= product.product_price %></li>
+        <% }) %>
+    </ul>
+</body>
+</html>
